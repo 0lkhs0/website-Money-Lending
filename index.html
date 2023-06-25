@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SG Money Lender</title>
+	<meta charset="utf-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <link href="images/logo.ico" rel="shortcut icon" type="image/x-icon">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="header">
+	 <div class="logo">
+	    <a href="index.html"><img src="images/logounedit.png" class="logo link" alt="Logo" width='100'></a>
+	 </div>
+   <div class="plan">
+      <button class="modal-button" href="#PersonalCalculator" >PLAN WITH US</button>
+	 </div>
+   <!-- The Modal -->
+    <div id="PersonalCalculator" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content personalloancalc">
+                <div>
+                  <span class="close">&times;</span>
+    <table border="0" align="center">
+      <tr>
+        <td width=50%>
+    <div class="calctitle" id="calculator">Personal Loan Calculator</div>
+    <div class="calcsub">Get the numbers you need here.</div>
+    <br/>
+    <div class="calchead">Loan Amount (Key-In / Drag Slider)</div>
+    <input type="number" id="amount" value="500" min="500" max="300000" class="amount" oninput="updateSlider1()">
+    <br/><br/>
+    <div class="slidecontainer">
+      <input type="range" id="myRange1" value="500" min="500" max="300000" class="slider" oninput="updateAmount1()">
+    </div>
+    <br/><br/>
+    <div class="calchead">Term (Monthly)</div>
+    <input type="number" id="month" value="1" min="1" max="36" class="amount" oninput="updateSlider2()" style="width:11%;">
+    <span class="amount">months</span>
+    <br/><br/>
+    <div class="slidecontainer">
+      <input type="range" id="myRange2" value="1" min="1" max="36" class="slider" oninput="updateAmount2()">
+    </div>
+    <br/><br/>
+    <div class="calchead">Interest % (Monthly)</div>
+    <br/>
+    <form id="interest" action="" class="interest">
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="1" checked="checked"><span>1</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="2"><span>2</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="3"><span>3</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="4"><span>4</span></label>
+    </form>
+    <br/><br/>
+    <button class="calculate" onclick="calculate()">Calculate</button></td>
+    <td width = 50% valign="middle">
+      <div class="total">
+        <div style="margin: auto; position: relative; top: 25%;">
+          <span class="smallhead">Total Payment</span><br/>
+          <input type="number" id="totalpayment" class="totalpayment" value="505" readonly>
+        </div>
+      </div>
+      <br/>
+      <table align="center" class="totals" border="0" cellpadding="5" cellspacing="5">
+        <tr>
+          <td width=50%><input type="number" id="principalpercent" class="minitotal" value="99" readonly>% Principal</td>
+          <td width=50%><input type="number" id="monthly" class="minitotal" value="505" readonly>$  <br/>Monthly Installment</span></td>
+        </tr>
+        <tr>
+          <td width=50%><input type="number" id="intpercent" class="minitotal" value="1" readonly>% Interest</td>
+          <td width=50%><input type="number" id="intamount" class="minitotal" value="5" readonly>$ <br/>Total Interest</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br/><br/>
+<div class="calctitle" style="text-align: center;"><a href="consult.html" class="link">Get an Official Quote from us now.</a></div>
+<br/>
+  </div>
+              </div>
+            </div>
+        </div>
+	 <nav>
+		<ul class="navbar">
+			<li id="link1"><a class="link" id="active" href="index.html">Home</a></li>
+      <li id="link2"><a class="link" href="borrow.html"> Why Take a Loan?</a></li>
+      <li id="link3"><a class="link" href="consult.html">Consult Us</a></li>
+    </ul>
+   </nav>
+  </div>
+
+  <div class="videomid" style="position: relative;">
+    <img src="images/mask.png" class="mask">
+    <div class="maintext">Take a step<div style="-webkit-text-stroke: 3px white; font-size: 70px;">FORWARD</div>with us.</div>
+    <video width="225" height="400" autoplay loop muted>
+      <source src="images/samplevid.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <a href="consult.html" class="link"><img src="images/consult.png" class="consultcircle"></a>
+    <img src="images/circle.png" class="circle">
+  </div>
+  <div class="scrolldown">
+    <br/><br/><a href="#tabledd" class="link">SCROLL DOWN</a>
+  </div>
+  <div class="midtext">
+    <br/><br/><br/><br/><br/>
+    We believe you shouldn't<br/>compromise on your dreams.<br/>We offer you <span class="highlight">affordable</span><br/>and <span class="highlight">competitive</span> loans<br/>to help improve your life.
+  </div>
+  <br/><br/><br/>
+  <div class="licensed">
+    <table border="0" align="center" width="80%" style="padding: 200px 0px 200px 0px;" id="tabledd">
+      <tr>
+        <td class="tabletext" width="50%">
+          <strong>SG Money Lender</strong> - <br/><span class="highlight">A Licensed Money Lender that Cares</span>
+        </td>
+        <td width="50%">
+          <ul class="tablelist">
+            <li>Reliable and professional financial company, registered under Ministry of Law, license number 49/2021.</li>
+            <br/>
+            <li>We promise no hidden costs. All terms and conditions will be thoroughly explained.</li>
+            <br/>
+            <li>Low interest rate and administration fees.</li>
+            <br/>
+            <li>You will be individually appointed a member of our staff who will see to your needs thoroughly</li>
+            <br/>
+            <li>5 Minutes to apply. Quick processing, fast approval, same-day disbursement.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="steps">
+    <div class="calctitle" style="margin-left: 25px;">Let us solve your problems in 4 simple steps...</div>
+    <br/><br/><br/>
+    <table border="0" align="center" width="80%" id="4steps" cellpadding="20px" cellspacing="20px">
+      <tr>
+        <td width=25% align="center">
+          <a href="consult.html">
+          <img src="images/time.png" class="iconsteps">
+          <div class="step tablelist">1. Book a Consultation Slot with us</a></div>
+        </td>
+        <td width=25% align="center">
+          <img src="images/chat.png" class="iconsteps">
+          <div class="step tablelist">2. Have a free chat with one of our representatives</div>
+        </td>
+        <td width=25% align="center">
+          <img src="images/tick.png" class="iconsteps">
+          <div class="step tablelist">3. Confirm your desired loan plan within minutes</div>
+        </td>
+        <td width=25% align="center">
+          <img src="images/money.png" class="iconsteps">
+          <div class="step tablelist">4. Receive the finalised contract and have your money within hours.</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="calctitle" style="margin-left: 25px;" id="solutions">Our Solutions</div>
+  <div class="loantypes">
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('personal').style.display = 'block';">
+          <img src="images/personal.jpg" class="loanpic">
+          <span class="loanwhich">Personal Loan</span>
+        </div>
+        <div class="hovtext" id="personal" onmouseleave="document.getElementById('personal').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/personalvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Personal Loans:</span><br/><br/>Whatever your income is, we understand being in a tight financial position. This is where our personal loan comes in! We are ready to help however you need.
+          </div>
+        </div>
+      </div>
+      
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('business').style.display = 'block';">
+          <img src="images/business.jpg" class="loanpic">
+          <span class="loanwhich">Business Loan</span>
+        </div>
+        <div class="hovtext" id="business" onmouseleave="document.getElementById('business').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/businessvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Business Loans:</span><br/><br/>Of course we understand the hard work needed to start a business. Why burden yourself further? Get a loan from us to help ease your process.
+          </div>
+        </div>
+      </div>
+
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('foreigner').style.display = 'block';">
+          <img src="images/foreigner.jpg" class="loanpic">
+          <span class="loanwhich">Foreigner Loan</span>
+        </div>
+        <div class="hovtext" id="foreigner" onmouseleave="document.getElementById('foreigner').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/foreignervid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Foreigner Loans:</span><br/><br/>Being in a brand new environment is never easy. Rather than waste time worrying about problems, let us help you enjoy your journey with this loan.
+          </div>
+        </div>
+      </div>
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('education').style.display = 'block';">
+          <img src="images/education.jpg" class="loanpic">
+          <span class="loanwhich">Education Loan</span>
+        </div>
+        <div class="hovtext" id="education" onmouseleave="document.getElementById('education').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/educationvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Education Loans:</span><br/><br/>You should never let finance limit your education journey. We are here to support you through it with our Education Loans.
+          </div>
+        </div>
+      </div>
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('medical').style.display = 'block';">
+          <img src="images/medical.jpg" class="loanpic">
+          <span class="loanwhich">Medical Loan</span>
+        </div>
+        <div class="hovtext" id="medical" onmouseleave="document.getElementById('medical').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/medicalvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Medical Loans:</span><br/><br/>Some bills, expected or not, can leave you feeling helpless. Prioritise your health first, worry about the bills later by taking a medical loan with us.
+          </div>
+        </div>
+      </div>
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('wedding').style.display = 'block';">
+          <img src="images/wedding.jpg" class="loanpic">
+          <span class="loanwhich">Wedding Loan</span>
+        </div>
+        <div class="hovtext" id="wedding" onmouseleave="document.getElementById('wedding').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/weddingvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Wedding Loans:</span><br/><br/>It's the happiest day of your life! You should not have to compromise on anything. Splurge on your dream wedding and invite us on your journey.
+          </div>
+        </div>
+      </div>
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('vacation').style.display = 'block';">
+          <img src="images/vacation.jpg" class="loanpic">
+          <span class="loanwhich">Vacation Loan</span>
+        </div>
+        <div class="hovtext" id="vacation" onmouseleave="document.getElementById('vacation').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/vacationvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Vacation Loans:</span><br/><br/>We often need a break from our daily activities. Why wait? Take our vacation loan and catch up with life when you're back.
+          </div>
+        </div>
+      </div>
+      <div class="loantype" style="position: relative;">
+        <div class="imgres" onmouseenter="document.getElementById('renovation').style.display = 'block';">
+          <img src="images/renovation.jpg" class="loanpic">
+          <span class="loanwhich">Renovation Loan</span>
+        </div>
+        <div class="hovtext" id="renovation" onmouseleave="document.getElementById('renovation').style.display = 'none';">
+          <div class="loanvideo">
+            <video width="280" height="157.5" autoplay loop muted>
+              <source src="images/renovationvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="textext">
+            <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 1px;">Renovation Loans:</span><br/><br/>The place we live in shapes who we are. With our renovation loans you can adapt your living space to suit your taste!
+          </div>
+        </div>
+      </div>
+  <br/><br/><br/><br/><br/>
+
+<script>
+
+  // Get the modal
+// Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+
+  // Update the current slider value (each time you drag the slider handle)
+  function updateSlider1() {
+    document.getElementById("myRange1").value = document.getElementById("amount").value;
+  }
+
+  function updateAmount1() {
+    document.getElementById("amount").value = document.getElementById("myRange1").value;
+  }
+  // Update the current slider value (each time you drag the slider handle)
+  function updateSlider2() {
+    document.getElementById("myRange2").value = document.getElementById("month").value;
+  }
+
+  function updateAmount2() {
+    document.getElementById("month").value = document.getElementById("myRange2").value;
+  }
+
+  function calculate() {
+
+    var amount = document.getElementById("amount").value;
+    var month = document.getElementById("month").value;
+    var dom = document.getElementById("interest");
+
+    for (var index=0; index < dom.interestpercent.length; index++) {
+          if (dom.interestpercent[index].checked) {
+            var interest = dom.interestpercent[index].value;
+            break;
+          }
+        }
+
+    var total = amount*(1+(month*interest/100));
+    var intamount = total - amount;
+    var principalpercent = (amount/total)*100;
+    var intpercent = (intamount/total)*100;
+    var monthly = total/month
+
+    document.getElementById("totalpayment").value = total;
+    document.getElementById("principalpercent").value = principalpercent.toFixed(0);
+    document.getElementById("intpercent").value = intpercent.toFixed(0);
+    document.getElementById("monthly").value = monthly.toFixed(0);
+    document.getElementById("intamount").value = intamount.toFixed(0);
+
+
+  }
+
+</script>
+
+</body>
+<footer>
+	<h5>&copy SG Money Lender</h5>
+</footer>
+</html>

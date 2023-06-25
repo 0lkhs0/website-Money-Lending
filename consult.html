@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang='en'>
+
+ <head>
+	<meta charset="utf-8">
+	<title>SG Money Lenders - Consult Us</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <link href="logo.ico" rel="shortcut icon" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+    
+
+ <body>
+	<div class="header">
+	 <div class="logo">
+	    <a href="index.html"><img src="images/logounedit.png" class="logo link" alt="Logo" width='100'></a>
+	 </div>
+   <div class="plan">
+      <button class="modal-button" href="#PersonalCalculator" >PLAN WITH US</button>
+	 </div>
+   <!-- The Modal -->
+    <div id="PersonalCalculator" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content personalloancalc">
+                <div>
+                  <span class="close">&times;</span>
+    <table border="0" align="center">
+      <tr>
+        <td width=50%>
+    <div class="calctitle" id="calculator">Personal Loan Calculator</div>
+    <div class="calcsub">Get the numbers you need here.</div>
+    <br/>
+    <div class="calchead">Loan Amount (Key-In / Drag Slider)</div>
+    <input type="number" id="amount" value="500" min="500" max="300000" class="amount" oninput="updateSlider1()">
+    <br/><br/>
+    <div class="slidecontainer">
+      <input type="range" id="myRange1" value="500" min="500" max="300000" class="slider" oninput="updateAmount1()">
+    </div>
+    <br/><br/>
+    <div class="calchead">Term (Monthly)</div>
+    <input type="number" id="month" value="1" min="1" max="36" class="amount" oninput="updateSlider2()" style="width:11%;">
+    <span class="amount">months</span>
+    <br/><br/>
+    <div class="slidecontainer">
+      <input type="range" id="myRange2" value="1" min="1" max="36" class="slider" oninput="updateAmount2()">
+    </div>
+    <br/><br/>
+    <div class="calchead">Interest % (Monthly)</div>
+    <br/>
+    <form id="interest" action="" class="interest">
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="1" checked="checked"><span>1</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="2"><span>2</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="3"><span>3</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="4"><span>4</span></label>
+    </form>
+    <br/><br/>
+    <button class="calculate" onclick="calculate()">Calculate</button></td>
+    <td width = 50% valign="middle">
+      <div class="total">
+        <div style="margin: auto; position: relative; top: 25%;">
+          <span class="smallhead">Total Payment</span><br/>
+          <input type="number" id="totalpayment" class="totalpayment" value="505" readonly>
+        </div>
+      </div>
+      <br/>
+      <table align="center" class="totals" border="0" cellpadding="5" cellspacing="5">
+        <tr>
+          <td width=50%><input type="number" id="principalpercent" class="minitotal" value="99" readonly>% Principal</td>
+          <td width=50%><input type="number" id="monthly" class="minitotal" value="505" readonly>$  <br/>Monthly Installment</span></td>
+        </tr>
+        <tr>
+          <td width=50%><input type="number" id="intpercent" class="minitotal" value="1" readonly>% Interest</td>
+          <td width=50%><input type="number" id="intamount" class="minitotal" value="5" readonly>$ <br/>Total Interest</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br/><br/>
+<div class="calctitle" style="text-align: center;"><a href="consult.html" class="link">Get an Official Quote from us now.</a></div>
+<br/>
+  </div>
+              </div>
+            </div>
+        </div>
+	 <nav>
+		<ul class="navbar">
+			<li id="link1"><a class="link" id="active" href="index.html">Home</a></li>
+      <li id="link2"><a class="link" href="borrow.html"> Why Take a Loan?</a></li>
+      <li id="link3"><a class="link" href="consult.html">Consult Us</a></li>
+    </ul>
+   </nav>
+  </div>
+
+ 
+
+<div class=banner style="vertical-align: text;"> 
+	<br/>
+	<br/>
+	<br/>
+	<h1> Consult Us! <br/></h1>
+	<br/>
+	<br/>
+	<p> 100% Confidential. Fast Loan Application At No Obligations</p>
+</div>
+	
+	<div class="x" >
+		<table class="table1">
+			<tr>
+				<td>
+					<form onsubmit="return;">
+					<label>Full Name (As per NRIC)* <br/>	 </label><input type="text" name="full-name" value="" size="40" placeholder="Enter your name" required>
+				</td>
+
+				<td>
+					
+					<label>Contact Number* <br/> </label><input type="text" name="contact-number" value="" size="40" placeholder="Enter your contact number" required>					
+
+				</td>
+				</tr>
+				<tr>
+				<td>
+					
+					<label>Loan Purpose (Select the most relevant)* <br/></label><select name="loan-purpose" required><option value="">Select Loan Type</option>
+						<option value="Personal Loan">Personal Loan</option>
+						<option value="Business Loan">Business Loan</option>
+						<option value="Urgent Cash Loan">Foreigner Loan</option>
+						<option value="Wedding Loan">Wedding Loan</option>
+						<option value="Renovation Loan">Renovation Loan</option>
+						<option value="Education Loan">Education Loan</option>
+						<option value="Car Loan">Medical Loan</option></select>
+		
+
+				</td>
+
+				<td>
+					<label>Monthly Income* <br/></label><input type="text" name="monthly-income" value="" size="40" placeholder="Enter your monthly income" required></span>
+
+				</td>
+			</tr>
+
+				<tr>
+					<td>
+						<label>Desired Loan Amount* <br/> </label><input type="text" name="desired-loan" value="" size="40" placeholder="Enter your desired loan amount" required>
+					</td>
+
+					<td>
+						<label>Remarks <br/> </label><input type="text" name="appointment-time" value="" size="40" placeholder="Additional Remarks">
+					</td>
+
+
+				</tr>
+
+				<tr>
+					<td>
+						<label>Preferred Date* <br/> </label><input type="date" name="desired-loan" value="" style="min-width:280px" size="40" placeholder="Enter your preferred date" required>
+					</td>
+
+					<td>
+						<label>Preferred Time* <br/> </label><input type="time" name="desired-loan" value="" style="min-width: 280px;" size="60" placeholder="Enter your preferred time" required>
+					</td>
+				</tr>
+
+			</table>
+				<div style="text-align: center; margin: 10px;">
+		   			
+		   			<input align="center" type="submit" value="Submit" onclick="alert('Thank you for your response! We will get back to you soon!')">
+		   		</form>
+				</div>
+
+		</div>		
+
+        	
+	</div>			
+					
+
+
+
+
+
+
+
+				</div>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<p style="text-align: center; width: 80% ; margin:auto;"><strong>Your Privacy and Security, Protected. </strong> <br>We take full measures to protect your identity. By submitting this form, you agree to be contacted with the information stated above. Your application is 100% confidential.</p>
+			</div>
+        
+
+<script>
+
+  // Get the modal
+// Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+</script>
+
+
+ </body>
+
+ <footer>
+	<h5>&copy SG Money Lender</h5>
+</footer>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>SG Money Lenders - Why Borrow</title>
+
+	<meta charset="utf-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <link href="images/logo.ico" rel="shortcut icon" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+ </head> 
+
+    
+
+ <body>
+
+ 	<div class="header">
+   <div class="logo">
+      <a href="index.html"><img src="images/logounedit.png" class="logo link" alt="Logo" width='100'></a>
+   </div>
+   <div class="plan">
+      <button class="modal-button" href="#PersonalCalculator" >PLAN WITH US</button>
+   </div>
+   <!-- The Modal -->
+    <div id="PersonalCalculator" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content personalloancalc">
+                <div>
+                  <span class="close">&times;</span>
+    <table border="0" align="center">
+      <tr>
+        <td width=50%>
+    <div class="calctitle" id="calculator">Personal Loan Calculator</div>
+    <div class="calcsub">Get the numbers you need here.</div>
+    <br/>
+    <div class="calchead">Loan Amount (Key-In / Drag Slider)</div>
+    <input type="number" id="amount" value="500" min="500" max="300000" class="amount" oninput="updateSlider1()">
+    <br/><br/>
+    <div class="slidecontainer">
+      <input type="range" id="myRange1" value="500" min="500" max="300000" class="slider" oninput="updateAmount1()">
+    </div>
+    <br/><br/>
+    <div class="calchead">Term (Monthly)</div>
+    <input type="number" id="month" value="1" min="1" max="36" class="amount" oninput="updateSlider2()" style="width:11%;">
+    <span class="amount">months</span>
+    <br/><br/>
+    <div class="slidecontainer">
+      <input type="range" id="myRange2" value="1" min="1" max="36" class="slider" oninput="updateAmount2()">
+    </div>
+    <br/><br/>
+    <div class="calchead">Interest % (Monthly)</div>
+    <br/>
+    <form id="interest" action="" class="interest">
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="1" checked="checked"><span>1</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="2"><span>2</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="3"><span>3</span></label>
+      <label><input type="radio" class="intradio" name="interestpercent" id="interestpercent" value="4"><span>4</span></label>
+    </form>
+    <br/><br/>
+    <button class="calculate" onclick="calculate()">Calculate</button></td>
+    <td width = 50% valign="middle">
+      <div class="total">
+        <div style="margin: auto; position: relative; top: 25%;">
+          <span class="smallhead">Total Payment</span><br/>
+          <input type="number" id="totalpayment" class="totalpayment" value="505" readonly>
+        </div>
+      </div>
+      <br/>
+      <table align="center" class="totals" border="0" cellpadding="5" cellspacing="5">
+        <tr>
+          <td width=50%><input type="number" id="principalpercent" class="minitotal" value="99" readonly>% Principal</td>
+          <td width=50%><input type="number" id="monthly" class="minitotal" value="505" readonly>$  <br/>Monthly Installment</span></td>
+        </tr>
+        <tr>
+          <td width=50%><input type="number" id="intpercent" class="minitotal" value="1" readonly>% Interest</td>
+          <td width=50%><input type="number" id="intamount" class="minitotal" value="5" readonly>$ <br/>Total Interest</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br/><br/>
+<div class="calctitle" style="text-align: center;"><a href="consult.html" class="link">Get an Official Quote from us now.</a></div>
+<br/>
+  </div>
+              </div>
+            </div>
+        </div>
+   <nav>
+    <ul class="navbar">
+      <li id="link1"><a class="link" id="active" href="index.html">Home</a></li>
+      <li id="link2"><a class="link" href="borrow.html"> Why Take a Loan?</a></li>
+      <li id="link3"><a class="link" href="consult.html">Consult Us</a></li>
+    </ul>
+   </nav>
+  </div>
+
+  <div class="loantypes">
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          
+          <a href="#personal" ><img src="images/personal.png" class="loanpic">
+          <span class="loanwhich2">Personal Loan</span></a>
+ 
+      </div>
+
+
+      </div>
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          <a href="#business"><img src="images/business.png" class="loanpic">
+          <span class="loanwhich2">Business Loan</span></a>
+        </div>
+    	</div>
+
+      
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          <a href="#foreigner"><img src="images/foreigner.png" class="loanpic">
+          <span class="loanwhich2">Foreigner Loan</span></a>
+        </div>
+      </div>
+
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          <a href="#education"><img src="images/education.png" class="loanpic">
+          <span class="loanwhich2">Education Loan</span></a>
+      </div>
+  </div>
+
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          <a href="#medical"><img src="images/medical.png" class="loanpic">
+          <span class="loanwhich2">Medical Loan</span></a>
+        </div>
+       
+        
+      </div>
+
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          <a href="#wedding"><img src="images/wedding.png" class="loanpic">
+          <span class="loanwhich2">Wedding Loan</span></a>
+        </div>
+      
+     
+      </div>
+
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          <a href="#vacation"><img src="images/vacation.png" class="loanpic">
+          <span class="loanwhich2">Vacation Loan</span></a>
+        </div>
+      
+      </div>
+
+      <div class="loantype" style="position: relative;">
+        <div class="imgres">
+          <a href="#renovation"><img src="images/renovation.png" class="loanpic">
+          <span class="loanwhich2">Renovation Loan</span></a>
+        </div>
+       	
+      </div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+  </div>
+ 
+ 		<div class="y">
+ 			<img class="pics" src="images/personal.png" >
+
+ 			<h3 id="personal" style="text-align: center;">Personal Loans</h3>
+ 			<p>
+			There are many reasons to take up a personal loan. Even though some may feel like there is a negative connotation surrounding taking loans, loans are actually helpful in may ways! While it’s always important to carefully consider your financial situation before taking on a loan, sometimes a personal loan is the best way to finance a large purchase or project that you can’t afford normally! As the name suggests one takes this loan for their own personal reasons. Here are some reasons why people take personal loans! <br/>
+
+			<ul class="z">
+				<li> Debt consolidation</li>
+                     <p>
+
+                        Debt consolidation is one of the most common reasons for taking out a personal loan. When you apply for a loan and use it to pay off multiple other loans or credit cards, you’re combining all of those outstanding balances into one monthly payment. This grouping of debt makes it easier to work out a time frame to pay off your balances without getting overwhelmed! <br></br>
+
+                        One of the best advantages of using a personal loan to pay off your credit cards is the lower interest rates. With lower rates, you can reduce the amount of interest you pay and the amount of time it takes to pay off the debt. Consolidation allows you to pay off credit cards in finite terms with a clear end date in sight.
+
+                        </p>
+
+                <li class="list1"> It is an alternative to payday loans</li>
+                	<p>
+                		Paydays loans have short repayment terms, which means you'll have less time to pay off the amount as compared to other loans. This quick turnover time makes it diffcult for borrowers to return the amount on time and end up incurring additional interest. Personal loans generally have a longer repayment period and here at SG money lender they cost less!
+                	</p>
+          </ul>
+          <p>
+          	All in all, personal loans are best suited for people who need a quick influx of cash. In this pandemic, the situation is everchanging, there may be a lot of unexpected scenerios. Interest is usually lower than credit cards and it is much safer. For example, defaulting on a personal loan won't immediately put your house, vehicle or savings at risk. Personal loans can be used for all sorts of reasons. from wedding; vacation and even a home make over.
+          </p>
+                           
+ 			</p>
+
+
+<br/><br/><br/><br/>
+ 			
+ 		</div>
+
+		<div class="y" >
+			
+			<img class="pics" src="images/business.png">
+
+			<h3 id = "business"style="text-align: center;">Business Loans</h3>
+
+			<p>
+				   Business loans are here to help your business grow. In Singapore, where rental costs and operational costs are high, taking a business loan has become part and parcel of starting a business. Whenther it is a e-commerce startup or selling finanical products, here are some reasons why you should take a business loan.
+					<ul class="list1">
+                            	<li > Accelecrate Growth and Expansion</li>
+                            	<p>
+                            		It is important for businesses to have sufficient cash flow to accelerate business growth and expansion. By taking up a business loan, it allow businesses to move into new markets and not rely on selling one type of service or product. Sufficient cash flows will help to take advantage of opportunities. There is no telling when a business opportunity will present itself. Only by having and making use of funds at the right time and seizing the opportunity, it will allow a business to grow.
+                            	</p>
+
+                            	<li class="list1"> Inventory and Equipment</li>
+                            	<p>
+                            		Businesses that require regular inventory restock and equipment rental will definitely need to have enough capital on their hands. Daily operational costs for businesses like these are costly and having enough cash to keep the lights on is the first of many challenges. As such getting a business loan can be especially useful for young businesses. With access to capital and funds on their hands, they can reprioritise their business goals and strategies.
+                            	</p>
+
+                            	<li class="list1"> Iron Out Cash Flow Issues</li>
+                            	<p>
+                            		Cyclical downturns are common and part and parcel of the experience of running your own business. There are seasonal demands and off-season periods that businesses have to endure. In times of cyclical downturns, it’s important to have enough access to funds to pay for operational costs and your workers’ salaries. Having a business loan will prevent scrambling when hard times occur. It is also common for businesses to take up a business loan when they are doing well to expedite loan proccess to prepare for down season periods.
+                            	</p>
+
+                            	<li class="list1"> Grow Creditworthiness Reputation</li>
+                            	<p>
+                            		When businesses borrow funds and pay them back in a timely manner, they prove themselves to be good prospects for banks and lenders to loan to. Having a strong track record of repaying debts builds trust between a business and its lenders. Being timely in repayments improves your credit score as it shows that your business has the ability to manage its finances well. For this reason, SMEs that need funds often take up business loans in Singapore as it can improve their credit score. Additionally, it also increases the approval rate of future business loan applications.
+                            	</p>
+
+                            	
+                            </ul>
+                         <p>
+                         	There are many reasons why you should take a business loan. Business loans are not only taken in preparation to down seasons. Having sufficent cash flow, it will help your business blossom. As long as you can pay back the loan amount, taking up a business loan is actually more good than harm. It allows you to bulid a good credit score and that will really help in times of need. Taking a business loan is part and parcel of every business starting up. Do not be afraid to take a business loan!
+                         </p>
+                     </p>
+ 
+
+		</div>  
+                     
+                     <br/><br/><br/><br/>
+
+		<div class="y" >
+			
+			<img class="pics" src="images/foreigner.png">
+
+			<h3 id="foreigner" style="text-align: center;">Foreigner Loan</h3>
+			 <p>
+                            	Do not worry about getting a loan as a foreigner at SG money lender! We understand that some foreign workers are not eligible to borrow any loans from banks, despite making up a significant chunk of Singapore’s economy. Workers face financial troubles like every Singaporean regularly does. Unlike Singaporeans, foreign workers have zero financial recourse that lets them juggle their finances. Here, we offer foreign-oriented loans made life easier for them.<br></br>
+
+                            	It’s tough enough financing your trip and lodging into Singapore. It’s even tougher when you are all alone without help from your family and friends back home, knowing that they are counting on you to help them out. <br></br>
+
+                            	When you are in financial hardship and looking for someone to turn to, banks might not be the place for you when you have no credit history with them or the ability to wait for long periods of time for your loans to be approved.
+
+                            	Foreigner loans provide the best options because they don't require credit history or collateral. It’s an easy solution that any foreign worker can use to their benefit without hiccups. Now, you won’t have to wait for a long time to receive financing.<br></br>
+
+                            	Here at SG money lender we offer:
+
+                            	<ul>
+                            		<li>Flexible repayment tenures</li>
+                            		<br/>
+
+                            		<li>Easy & hassle free loan application</li><br/>
+                            		<li>Quick cash approval</li>
+                            	</ul>
+
+                            </p>         
+                 </div>
+              
+<br/><br/><br/><br/>
+              
+                 <div class="y" >
+
+                 			
+
+                            <img class="pics" src="images/education.png">
+                            <h3 id ="education"style="text-align: center;">Education Loans </h3>
+
+                            <p>
+                            	As the saying goes "While I live, I learn", education is not just catered to young students, there are many courses and workshops catered to adults to broaden theirs skills in this competitive world. Although there are educational coverage from the government such as SkillsFuture and SkillShare, it may not be enough. Here at SG money lenders, we offer educational loans for learners like you! <br></br>
+
+                            	Opting for an education loan can help reduce the strain on your family savings and eliminates the need to liquidate your investments in fixed deposits, mutual funds or bonds. There is also lower interest rates! <br></br>
+                            	Interest also starts after completing your studies or getting a job. Taking on an education loan is a great opportunity for students to pay for their own education, without needing to depend on family. Besides, when the loan is repaid, it will also start building credit history. A good credit profile will help in get cheaper loans in the future. <br/><br/>
+
+
+                            	Regardless if you are planning to study overseas, to get a diploma or a degree, SG money lender's education loan can be customized to help you. We understand the situation and are able to offer lower interest rates for our education loans. Find out more today!
+
+                            	<br/><br/>
+
+								<ul>
+									<li>Fast loan approval and disbursement</li> <br>
+									<li>Flexible loan tenures</li> <br>
+									<li>Ease of application and approval</li> <br>
+									<li>Increased convenience</li> <br>
+								</ul>
+                            </p>
+
+     
+                 </div>
+
+<br/><br/><br/><br/>
+                 <div class="y">
+             
+                 	<img class="pics" src="images/medical.png">
+
+                 	<h3 id="medical" style="text-align: center;">Medical Loans </h3>
+                    
+                            <p>
+								What is a Medical Loan?
+								As the saying goes, “health is wealth”. One of the most important things in life is that you and your loved ones are happy and healthy. <br></br>
+
+								However, life is unpredictable and a medical emergency can strike anytime. When a medical emergency befalls, it is not only the mental and emotional aspects of your life that are strained. Your finances will take a toll as well. <br></br>
+
+								In times of a medical emergency, securing funds should be a quick and simple process. This is where a medical loan can come in handy. Here at SG money lenders, we are here to provide financial support however possible! <br></br>
+
+								A medical loan is intended to specifically fund your medical costs that cannot be covered by your health insurance. They cater for scheduled or emergency surgical procedures, necessary medical procedures, out of network charges, medical debt consolidation, or any other medical cost that may arise. <br></br>
+
+								Financing a medical procedure now and paying it off over time can allow you to get the procedure done sooner. That’s an important consideration given that—as with many types of medical procedures—the earlier the operation is done, the better. <br/><br/>
+
+								<ul>
+									<li>Fast loan approval and disbursement</li> <br>
+									<li>Flexible loan tenures</li> <br>
+									<li>Ease of application and approval</li> <br>
+									<li>Increased convenience</li> <br>
+								</ul>
+                            </p>
+                            
+                 </div>
+              <br/><br/><br/><br/>
+                 <div class="y" >
+
+                 		<img class="pics" src="images/wedding.png">
+
+                 			<h3 id="wedding"style="text-align: center;">Wedding Loans </h3>
+
+                          
+                            <p>
+                            	It is a known fact that Singaporeans love to go big when it comes to celebrations. Whether it is a festival, a milestone birthday or a wedding, we love to get into a celebratory mood and throw lavish extravaganzas. But big celebrations often cost big money. Walking down the aisle with your partner is beautiful and magical. But alas, dream weddings come with a huge price tag. In fact, one can often go overboard with wedding expenses. So what do you do when you cross your wedding budget? It’s simple; you can take out a Personal Loan to fund your extra wedding expenses. Let’s look at the benefits of taking a Personal Loan for wedding. <br></br>
+
+                            	You can use the loan amount to fund several expenses: As we all know, there are countless expenses associated with weddings. You have to pay for the venue, lighting, photography, decoration, catering and so on. You may also have to purchase your wedding trousseau, jewellery and for your honeymoon trip. Your wedding loan can help you meet all the expenses associated with your big day. Take a personal loan with SG money lender today for your big day!
+
+                            	<br/><br/>
+
+								<ul>
+									<li>Fast loan approval and disbursement</li> <br>
+									<li>Flexible loan tenures</li> <br>
+									<li>Ease of application and approval</li> <br>
+									<li>Increased convenience</li> <br>
+								</ul>
+
+                            </p>
+                            
+                 </div>
+              <br/><br/><br/><br/>
+                 <div class="y" >
+
+                 	<img class="pics" src="images/vacation.png">
+
+                 			<h3 id="vacation" style="text-align: center;">Vacation Loans </h3>
+
+                            
+                            <p>
+                            	Do you want to travel and have fun after the Covid restrictions end? I'm sure many Singaporeans are planning to travel overseas after spending so long stuck in Singapore. You can take a vacation loan with us to pay for that! <br></br>
+
+                            	Many Singaporeans have been wanting to take a break as the workplace becomes more stressful due to the piling pressure for more inputs and results. However, with the cost of living going up every day, your savings might not be enough to finance a trip to your dream destinations. You need to ensure that you have enough for the flight, accommodation and food and still have enough funds for emergencies. It also doesn’t help that inflation is making daily life in Singapore a greater struggle than it already is. <br></br>
+
+                            	Rather than spending all of your savings on your trip, there is now the option of a tailored vacation loan that will cater for all expenses including transportation, accommodation, food, sightseeing and much more. Before you frown upon the thought of loans and click away, pause and think about your savings and expenses. Here at SG money lender we require no property or assets as collateral, and you repay the loan in fixed monthly installments over a period of time!<br></br>
+
+
+
+								<ul>
+									<li>Fast loan approval and disbursement</li> <br>
+									<li>Flexible loan tenures</li> <br>
+									<li>Ease of application and approval</li> <br>
+									<li>Increased convenience</li> <br>
+								</ul>
+
+                            </p>
+                            
+                 </div>
+<br/><br/><br/><br/>
+                 <div class="y" >
+
+                 			<img class="pics" src="images/renovation.png">
+
+                 			<h3 id="renovation" style="text-align: center;">Renovation Loans </h3>
+
+                            
+         
+
+                            <p>
+                            	There is also a possible scenario wherein a home requires urgent repairs or where certain elements are posing a safety threat. This could take the form of electrical or plumbing requirements – repairs that need immediate attention. Alternatively, you may simply be contemplating long-desired changes to your home just to break the monotony and refresh your space. The reasons are endless – you may possibly just be bored of looking at the same dull light fixtures, perhaps wish to install better sound insulation to complement the high-end stereo system for movie nights, or just change things around. <br></br>
+
+                            	Getting this kind of work done can be expensive. At times, it may not be possible to have the required cash upfront to pay for renovations at your home, or you would rather incur the cost over a period of time instead of making a singular dent in your savings. <br></br>
+
+                            	Renovation loans are here just for those issues. <br></br>
+
+                            	Renovation loans help to fund your home makeover project. Rather than tapping into your savings, opting for a renovation loan can allow you the comfort of not having to worry about cashflow, but still accomplish the desired makeover for your house. <br></br>
+                            	<br/><br/>
+
+								<ul>
+									<li>Fast loan approval and disbursement</li> <br>
+									<li>Flexible loan tenures</li> <br>
+									<li>Ease of application and approval</li> <br>
+									<li>Increased convenience</li> <br>
+								</ul>
+                            </p>
+                        
+
+</div>
+
+                
+              
+
+
+<script>
+
+  // Get the modal
+// Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+</script>
+
+
+ </body>
+<footer>
+	<h5>&copy SG Money Lender</h5>
+</footer>
+</html>
+
